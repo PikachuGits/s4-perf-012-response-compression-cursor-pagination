@@ -5,6 +5,7 @@
 **签名游标（keyset）分页**；同时给出压缩前后体积、第 200 页响应时间与查询计划的前后对比。
 
 - 公开仓库：`https://github.com/PikachuGits/s4-perf-012-response-compression-cursor-pagination`
+- 交付 PR（已合并）：`https://github.com/PikachuGits/s4-perf-012-response-compression-cursor-pagination/pull/1`
 - 默认分支：`main`
 - 本次实测：SQLite 3.50.4 与 PostgreSQL 16.16 各 `41 passed`，覆盖率 91% / 90%
 - 证据：`evidence/test-results.txt`、`evidence/test-results-postgres.txt`、
