@@ -1,0 +1,384 @@
+{
+  "generated_at": "2026-11-21T13:22:50+00:00",
+  "environment": {
+    "python": "3.12.12",
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "database_dialect": "sqlite",
+    "database_version": "3.50.4",
+    "server_startup_ms": 267.1,
+    "repeats": 30,
+    "compression_min_bytes": 1024,
+    "brotli_available": true
+  },
+  "compression": [
+    {
+      "endpoint": "members",
+      "path": "/api/v1/members?limit=100",
+      "items": 100,
+      "identity": {
+        "bytes": 41578,
+        "latency": {
+          "n": 15,
+          "median_ms": 1.542,
+          "p95_ms": 1.585,
+          "mean_ms": 1.513,
+          "min_ms": 1.38,
+          "max_ms": 1.64
+        }
+      },
+      "encodings": {
+        "gzip": {
+          "bytes": 4346,
+          "ratio": 0.8955,
+          "saved_bytes": 37232,
+          "latency": {
+            "n": 15,
+            "median_ms": 1.592,
+            "p95_ms": 1.657,
+            "mean_ms": 2.097,
+            "min_ms": 1.419,
+            "max_ms": 9.85
+          }
+        },
+        "br": {
+          "bytes": 3322,
+          "ratio": 0.9201,
+          "saved_bytes": 38256,
+          "latency": {
+            "n": 15,
+            "median_ms": 1.456,
+            "p95_ms": 1.774,
+            "mean_ms": 1.508,
+            "min_ms": 1.389,
+            "max_ms": 1.859
+          }
+        }
+      }
+    },
+    {
+      "endpoint": "interactions",
+      "path": "/api/v1/interactions?limit=100",
+      "items": 100,
+      "identity": {
+        "bytes": 67760,
+        "latency": {
+          "n": 15,
+          "median_ms": 1.458,
+          "p95_ms": 1.592,
+          "mean_ms": 1.473,
+          "min_ms": 1.356,
+          "max_ms": 1.682
+        }
+      },
+      "encodings": {
+        "gzip": {
+          "bytes": 6737,
+          "ratio": 0.9006,
+          "saved_bytes": 61023,
+          "latency": {
+            "n": 15,
+            "median_ms": 1.775,
+            "p95_ms": 2.117,
+            "mean_ms": 1.808,
+            "min_ms": 1.62,
+            "max_ms": 2.167
+          }
+        },
+        "br": {
+          "bytes": 5262,
+          "ratio": 0.9223,
+          "saved_bytes": 62498,
+          "latency": {
+            "n": 15,
+            "median_ms": 1.728,
+            "p95_ms": 1.861,
+            "mean_ms": 1.721,
+            "min_ms": 1.59,
+            "max_ms": 1.885
+          }
+        }
+      }
+    },
+    {
+      "endpoint": "audit_logs",
+      "path": "/api/v1/audit-logs?limit=100",
+      "items": 100,
+      "identity": {
+        "bytes": 60123,
+        "latency": {
+          "n": 15,
+          "median_ms": 1.377,
+          "p95_ms": 1.606,
+          "mean_ms": 1.426,
+          "min_ms": 1.318,
+          "max_ms": 1.654
+        }
+      },
+      "encodings": {
+        "gzip": {
+          "bytes": 5863,
+          "ratio": 0.9025,
+          "saved_bytes": 54260,
+          "latency": {
+            "n": 15,
+            "median_ms": 1.629,
+            "p95_ms": 1.745,
+            "mean_ms": 1.636,
+            "min_ms": 1.537,
+            "max_ms": 1.831
+          }
+        },
+        "br": {
+          "bytes": 4808,
+          "ratio": 0.92,
+          "saved_bytes": 55315,
+          "latency": {
+            "n": 15,
+            "median_ms": 1.627,
+            "p95_ms": 1.927,
+            "mean_ms": 2.187,
+            "min_ms": 1.502,
+            "max_ms": 9.674
+          }
+        }
+      }
+    },
+    {
+      "endpoint": "small_json_control",
+      "path": "/api/v1/meta/dictionaries",
+      "identity": {
+        "bytes": 195
+      },
+      "encodings": {},
+      "note": "低于 1 KB 阈值的 JSON 不压缩（control）",
+      "content_encoding": "identity"
+    }
+  ],
+  "pagination": [
+    {
+      "endpoint": "members",
+      "page": 200,
+      "limit": 50,
+      "offset": 9950,
+      "offset_mode": {
+        "path": "/api/v1/members?pagination=offset&offset=9950&limit=50",
+        "latency": {
+          "n": 30,
+          "median_ms": 2.357,
+          "p95_ms": 2.706,
+          "mean_ms": 2.404,
+          "min_ms": 2.271,
+          "max_ms": 2.768
+        },
+        "bytes": 20756
+      },
+      "cursor_mode": {
+        "path": "/api/v1/members?pagination=cursor&limit=50&cursor=eyJ2IjoxLCJzIjoiN2IxODE3OWIzNWMyYTFhMSIsInQiOiIyMDI2LTAxLTAyVDAxOjAyOjMwLjAwMDAwMCswMDowMCIsImkiOiIwMTliN2MzYS0zYzcwLTdmM2QtOWIwYS0wMWJkZGZjNWVkZmQifQ.h34yoqWh812AokUhTfetOfZyHNcUdHVqfKupWyr94XA",
+        "latency": {
+          "n": 30,
+          "median_ms": 1.031,
+          "p95_ms": 1.205,
+          "mean_ms": 1.057,
+          "min_ms": 0.973,
+          "max_ms": 1.314
+        },
+        "bytes": 20947,
+        "cursor_chars": 194
+      },
+      "offset_with_total": {
+        "latency": {
+          "n": 10,
+          "median_ms": 12.706,
+          "p95_ms": 13.41,
+          "mean_ms": 12.685,
+          "min_ms": 12.35,
+          "max_ms": 13.41
+        }
+      },
+      "speedup_median": 2.29,
+      "explain": {
+        "dialect": "sqlite",
+        "offset": [
+          "SEARCH members USING INDEX ix_members_org_created_id (org_id=?)"
+        ],
+        "cursor": [
+          "SEARCH members USING INDEX ix_members_org_created_id (org_id=? AND (created_at,id)<(?,?))"
+        ],
+        "execution_ms": {
+          "offset": null,
+          "cursor": null
+        },
+        "timing_ms": {
+          "offset": {
+            "n": 15,
+            "median_ms": 0.019,
+            "p95_ms": 0.03,
+            "mean_ms": 0.023,
+            "min_ms": 0.017,
+            "max_ms": 0.062
+          },
+          "cursor": {
+            "n": 15,
+            "median_ms": 0.023,
+            "p95_ms": 0.028,
+            "mean_ms": 0.026,
+            "min_ms": 0.02,
+            "max_ms": 0.063
+          }
+        }
+      },
+      "first_item_equal": true,
+      "items": 50
+    },
+    {
+      "endpoint": "interactions",
+      "page": 200,
+      "limit": 50,
+      "offset": 9950,
+      "offset_mode": {
+        "path": "/api/v1/interactions?pagination=offset&offset=9950&limit=50",
+        "latency": {
+          "n": 30,
+          "median_ms": 2.753,
+          "p95_ms": 3.067,
+          "mean_ms": 2.789,
+          "min_ms": 2.632,
+          "max_ms": 3.078
+        },
+        "bytes": 33847
+      },
+      "cursor_mode": {
+        "path": "/api/v1/interactions?pagination=cursor&limit=50&cursor=eyJ2IjoxLCJzIjoiMTRjMTBmZmY3ZTg2YTVmZCIsInQiOiIyMDI2LTAxLTAyVDE0OjU1OjAwLjAwMDAwMCswMDowMCIsImkiOiIwMTliN2YzNC02OWEwLTdiZGYtOTVmNC0xY2ViM2ViNjk3YWEifQ.-NuTseR0peK9Y01ZIyJXC0RcwuSaoF25Ne2n2mZoIak",
+        "latency": {
+          "n": 30,
+          "median_ms": 1.11,
+          "p95_ms": 1.449,
+          "mean_ms": 1.142,
+          "min_ms": 1.027,
+          "max_ms": 1.491
+        },
+        "bytes": 34038,
+        "cursor_chars": 194
+      },
+      "offset_with_total": {
+        "latency": {
+          "n": 10,
+          "median_ms": 25.91,
+          "p95_ms": 26.172,
+          "mean_ms": 25.896,
+          "min_ms": 25.675,
+          "max_ms": 26.172
+        }
+      },
+      "speedup_median": 2.48,
+      "explain": {
+        "dialect": "sqlite",
+        "offset": [
+          "SEARCH interactions USING INDEX ix_interactions_org_occurred_id (org_id=?)"
+        ],
+        "cursor": [
+          "SEARCH interactions USING INDEX ix_interactions_org_occurred_id (org_id=? AND (occurred_at,id)<(?,?))"
+        ],
+        "execution_ms": {
+          "offset": null,
+          "cursor": null
+        },
+        "timing_ms": {
+          "offset": {
+            "n": 15,
+            "median_ms": 0.017,
+            "p95_ms": 0.028,
+            "mean_ms": 0.022,
+            "min_ms": 0.016,
+            "max_ms": 0.065
+          },
+          "cursor": {
+            "n": 15,
+            "median_ms": 0.021,
+            "p95_ms": 0.035,
+            "mean_ms": 0.025,
+            "min_ms": 0.019,
+            "max_ms": 0.06
+          }
+        }
+      },
+      "first_item_equal": true,
+      "items": 50
+    },
+    {
+      "endpoint": "audit_logs",
+      "page": 200,
+      "limit": 50,
+      "offset": 9950,
+      "offset_mode": {
+        "path": "/api/v1/audit-logs?pagination=offset&offset=9950&limit=50",
+        "latency": {
+          "n": 30,
+          "median_ms": 2.614,
+          "p95_ms": 2.895,
+          "mean_ms": 2.641,
+          "min_ms": 2.527,
+          "max_ms": 2.934
+        },
+        "bytes": 30032
+      },
+      "cursor_mode": {
+        "path": "/api/v1/audit-logs?pagination=cursor&limit=50&cursor=eyJ2IjoxLCJzIjoiODk5NjQ5NjMzMjY2MzIxOCIsInQiOiIyMDI2LTAxLTAyVDA2OjM0OjEwLjAwMDAwMCswMDowMCIsImkiOiIwMTliN2Q2OS1lMmQwLTdkOGUtODExMi01NzAyNjU2NzMzNDMifQ.gInVSi4t-y6kBpwUB_BkhhCQ0og0hjZcyBx__kbmIUo",
+        "latency": {
+          "n": 30,
+          "median_ms": 1.099,
+          "p95_ms": 1.309,
+          "mean_ms": 1.12,
+          "min_ms": 1.017,
+          "max_ms": 1.381
+        },
+        "bytes": 30223,
+        "cursor_chars": 194
+      },
+      "offset_with_total": {
+        "latency": {
+          "n": 10,
+          "median_ms": 53.75,
+          "p95_ms": 55.186,
+          "mean_ms": 53.989,
+          "min_ms": 53.293,
+          "max_ms": 55.186
+        }
+      },
+      "speedup_median": 2.38,
+      "explain": {
+        "dialect": "sqlite",
+        "offset": [
+          "SEARCH audit_logs USING INDEX ix_audit_logs_org_created_id (org_id=?)"
+        ],
+        "cursor": [
+          "SEARCH audit_logs USING INDEX ix_audit_logs_org_created_id (org_id=? AND (created_at,id)<(?,?))"
+        ],
+        "execution_ms": {
+          "offset": null,
+          "cursor": null
+        },
+        "timing_ms": {
+          "offset": {
+            "n": 15,
+            "median_ms": 0.017,
+            "p95_ms": 0.028,
+            "mean_ms": 0.021,
+            "min_ms": 0.016,
+            "max_ms": 0.062
+          },
+          "cursor": {
+            "n": 15,
+            "median_ms": 0.02,
+            "p95_ms": 0.027,
+            "mean_ms": 0.024,
+            "min_ms": 0.019,
+            "max_ms": 0.058
+          }
+        }
+      },
+      "first_item_equal": true,
+      "items": 50
+    }
+  ]
+}

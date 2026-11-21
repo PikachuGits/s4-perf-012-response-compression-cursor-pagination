@@ -1,0 +1,426 @@
+{
+  "generated_at": "2026-11-21T13:23:00+00:00",
+  "environment": {
+    "python": "3.12.12",
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "database_dialect": "postgresql",
+    "database_version": "16.16 (Homebrew)",
+    "server_startup_ms": 266.2,
+    "repeats": 30,
+    "compression_min_bytes": 1024,
+    "brotli_available": true
+  },
+  "compression": [
+    {
+      "endpoint": "members",
+      "path": "/api/v1/members?limit=100",
+      "items": 100,
+      "identity": {
+        "bytes": 42778,
+        "latency": {
+          "n": 15,
+          "median_ms": 1.558,
+          "p95_ms": 1.737,
+          "mean_ms": 2.218,
+          "min_ms": 1.377,
+          "max_ms": 11.741
+        }
+      },
+      "encodings": {
+        "gzip": {
+          "bytes": 4365,
+          "ratio": 0.898,
+          "saved_bytes": 38413,
+          "latency": {
+            "n": 15,
+            "median_ms": 1.655,
+            "p95_ms": 1.873,
+            "mean_ms": 1.688,
+            "min_ms": 1.54,
+            "max_ms": 1.956
+          }
+        },
+        "br": {
+          "bytes": 3328,
+          "ratio": 0.9222,
+          "saved_bytes": 39450,
+          "latency": {
+            "n": 15,
+            "median_ms": 1.611,
+            "p95_ms": 1.88,
+            "mean_ms": 1.689,
+            "min_ms": 1.544,
+            "max_ms": 2.32
+          }
+        }
+      }
+    },
+    {
+      "endpoint": "interactions",
+      "path": "/api/v1/interactions?limit=100",
+      "items": 100,
+      "identity": {
+        "bytes": 69560,
+        "latency": {
+          "n": 15,
+          "median_ms": 1.563,
+          "p95_ms": 1.773,
+          "mean_ms": 1.591,
+          "min_ms": 1.463,
+          "max_ms": 1.81
+        }
+      },
+      "encodings": {
+        "gzip": {
+          "bytes": 6744,
+          "ratio": 0.903,
+          "saved_bytes": 62816,
+          "latency": {
+            "n": 15,
+            "median_ms": 1.93,
+            "p95_ms": 2.125,
+            "mean_ms": 1.928,
+            "min_ms": 1.694,
+            "max_ms": 2.325
+          }
+        },
+        "br": {
+          "bytes": 5293,
+          "ratio": 0.9239,
+          "saved_bytes": 64267,
+          "latency": {
+            "n": 15,
+            "median_ms": 1.921,
+            "p95_ms": 2.111,
+            "mean_ms": 1.921,
+            "min_ms": 1.698,
+            "max_ms": 2.149
+          }
+        }
+      }
+    },
+    {
+      "endpoint": "audit_logs",
+      "path": "/api/v1/audit-logs?limit=100",
+      "items": 100,
+      "identity": {
+        "bytes": 61323,
+        "latency": {
+          "n": 15,
+          "median_ms": 1.44,
+          "p95_ms": 1.683,
+          "mean_ms": 2.084,
+          "min_ms": 1.351,
+          "max_ms": 10.74
+        }
+      },
+      "encodings": {
+        "gzip": {
+          "bytes": 5851,
+          "ratio": 0.9046,
+          "saved_bytes": 55472,
+          "latency": {
+            "n": 15,
+            "median_ms": 1.667,
+            "p95_ms": 1.863,
+            "mean_ms": 1.708,
+            "min_ms": 1.583,
+            "max_ms": 1.919
+          }
+        },
+        "br": {
+          "bytes": 4836,
+          "ratio": 0.9211,
+          "saved_bytes": 56487,
+          "latency": {
+            "n": 15,
+            "median_ms": 1.792,
+            "p95_ms": 2.095,
+            "mean_ms": 1.856,
+            "min_ms": 1.622,
+            "max_ms": 2.326
+          }
+        }
+      }
+    },
+    {
+      "endpoint": "small_json_control",
+      "path": "/api/v1/meta/dictionaries",
+      "identity": {
+        "bytes": 195
+      },
+      "encodings": {},
+      "note": "低于 1 KB 阈值的 JSON 不压缩（control）",
+      "content_encoding": "identity"
+    }
+  ],
+  "pagination": [
+    {
+      "endpoint": "members",
+      "page": 200,
+      "limit": 50,
+      "offset": 9950,
+      "offset_mode": {
+        "path": "/api/v1/members?pagination=offset&offset=9950&limit=50",
+        "latency": {
+          "n": 30,
+          "median_ms": 1.801,
+          "p95_ms": 2.023,
+          "mean_ms": 1.823,
+          "min_ms": 1.685,
+          "max_ms": 2.03
+        },
+        "bytes": 21356
+      },
+      "cursor_mode": {
+        "path": "/api/v1/members?pagination=cursor&limit=50&cursor=eyJ2IjoxLCJzIjoiN2IxODE3OWIzNWMyYTFhMSIsInQiOiIyMDI2LTAxLTAyVDAxOjAyOjMwLjAwMDAwMCswMDowMCIsImkiOiIwMTliN2MzYS0zYzcwLTczNWEtOWY5Zi05Y2FiYTA0ZmM3ZjIifQ.pQjq8ac8bH96W4k-4b2QyZ9TTNT80_IlpeTBHDubAlw",
+        "latency": {
+          "n": 30,
+          "median_ms": 1.243,
+          "p95_ms": 1.604,
+          "mean_ms": 1.289,
+          "min_ms": 1.147,
+          "max_ms": 1.798
+        },
+        "bytes": 21547,
+        "cursor_chars": 194
+      },
+      "offset_with_total": {
+        "latency": {
+          "n": 10,
+          "median_ms": 4.316,
+          "p95_ms": 5.455,
+          "mean_ms": 4.407,
+          "min_ms": 4.064,
+          "max_ms": 5.455
+        }
+      },
+      "speedup_median": 1.45,
+      "explain": {
+        "dialect": "postgresql",
+        "offset": [
+          "Limit  (cost=1038.74..1044.07 rows=51 width=24) (actual time=0.982..0.989 rows=51 loops=1)",
+          "  Buffers: shared hit=396",
+          "  ->  Index Scan Backward using ix_members_org_created_id on members  (cost=0.41..4174.60 rows=40000 width=24) (actual time=0.002..0.824 rows=10001 loops=1)",
+          "        Index Cond: (org_id = '11111111-1111-7111-8111-111111111111'::uuid)",
+          "        Filter: (deleted_at IS NULL)",
+          "        Buffers: shared hit=396",
+          "Planning Time: 0.012 ms",
+          "Execution Time: 0.993 ms"
+        ],
+        "cursor": [
+          "Limit  (cost=0.41..6.62 rows=51 width=24) (actual time=0.003..0.008 rows=51 loops=1)",
+          "  Buffers: shared hit=6",
+          "  ->  Index Scan Backward using ix_members_org_created_id on members  (cost=0.41..3645.32 rows=29967 width=24) (actual time=0.003..0.007 rows=51 loops=1)",
+          "        Index Cond: ((org_id = '11111111-1111-7111-8111-111111111111'::uuid) AND (ROW(created_at, id) < ROW('2026-01-02 09:02:30+08'::timestamp with time zone, '019b7c3a-3c70-735a-9f9f-9caba04fc7f2'::uuid)))",
+          "        Filter: (deleted_at IS NULL)",
+          "        Buffers: shared hit=6",
+          "Planning Time: 0.017 ms",
+          "Execution Time: 0.017 ms"
+        ],
+        "execution_ms": {
+          "offset": 0.993,
+          "cursor": 0.017
+        },
+        "timing_ms": {
+          "offset": {
+            "n": 15,
+            "median_ms": 0.821,
+            "p95_ms": 1.016,
+            "mean_ms": 0.867,
+            "min_ms": 0.767,
+            "max_ms": 1.108
+          },
+          "cursor": {
+            "n": 15,
+            "median_ms": 0.126,
+            "p95_ms": 0.173,
+            "mean_ms": 0.135,
+            "min_ms": 0.111,
+            "max_ms": 0.216
+          }
+        }
+      },
+      "first_item_equal": true,
+      "items": 50
+    },
+    {
+      "endpoint": "interactions",
+      "page": 200,
+      "limit": 50,
+      "offset": 9950,
+      "offset_mode": {
+        "path": "/api/v1/interactions?pagination=offset&offset=9950&limit=50",
+        "latency": {
+          "n": 30,
+          "median_ms": 1.965,
+          "p95_ms": 2.23,
+          "mean_ms": 1.989,
+          "min_ms": 1.809,
+          "max_ms": 2.267
+        },
+        "bytes": 34747
+      },
+      "cursor_mode": {
+        "path": "/api/v1/interactions?pagination=cursor&limit=50&cursor=eyJ2IjoxLCJzIjoiMTRjMTBmZmY3ZTg2YTVmZCIsInQiOiIyMDI2LTAxLTAyVDE0OjU1OjAwLjAwMDAwMCswMDowMCIsImkiOiIwMTliN2YzNC02OWEwLTc1NjAtOWI1OS03ZDI0YWE4NzkyM2QifQ.tS-SUt1oAl2hskZWZNFyTDOcfsF7tKUiC2XBj_bXEvk",
+        "latency": {
+          "n": 30,
+          "median_ms": 1.317,
+          "p95_ms": 1.57,
+          "mean_ms": 1.348,
+          "min_ms": 1.199,
+          "max_ms": 1.586
+        },
+        "bytes": 34938,
+        "cursor_chars": 194
+      },
+      "offset_with_total": {
+        "latency": {
+          "n": 10,
+          "median_ms": 8.77,
+          "p95_ms": 10.666,
+          "mean_ms": 8.747,
+          "min_ms": 7.896,
+          "max_ms": 10.666
+        }
+      },
+      "speedup_median": 1.49,
+      "explain": {
+        "dialect": "postgresql",
+        "offset": [
+          "Limit  (cost=1673.46..1682.04 rows=51 width=24) (actual time=0.931..0.943 rows=51 loops=1)",
+          "  Buffers: shared hit=674",
+          "  ->  Index Scan Backward using ix_interactions_org_occurred_id on interactions  (cost=0.42..13452.04 rows=80000 width=24) (actual time=0.002..0.781 rows=10001 loops=1)",
+          "        Index Cond: (org_id = '11111111-1111-7111-8111-111111111111'::uuid)",
+          "        Filter: (deleted_at IS NULL)",
+          "        Buffers: shared hit=674",
+          "Planning Time: 0.013 ms",
+          "Execution Time: 0.946 ms"
+        ],
+        "cursor": [
+          "Limit  (cost=0.42..9.78 rows=51 width=24) (actual time=0.002..0.009 rows=51 loops=1)",
+          "  Buffers: shared hit=8",
+          "  ->  Index Scan Backward using ix_interactions_org_occurred_id on interactions  (cost=0.42..12885.57 rows=70189 width=24) (actual time=0.002..0.007 rows=51 loops=1)",
+          "        Index Cond: ((org_id = '11111111-1111-7111-8111-111111111111'::uuid) AND (ROW(occurred_at, id) < ROW('2026-01-02 22:55:00+08'::timestamp with time zone, '019b7f34-69a0-7560-9b59-7d24aa87923d'::uuid)))",
+          "        Filter: (deleted_at IS NULL)",
+          "        Buffers: shared hit=8",
+          "Planning Time: 0.015 ms",
+          "Execution Time: 0.012 ms"
+        ],
+        "execution_ms": {
+          "offset": 0.946,
+          "cursor": 0.012
+        },
+        "timing_ms": {
+          "offset": {
+            "n": 15,
+            "median_ms": 0.903,
+            "p95_ms": 0.991,
+            "mean_ms": 0.911,
+            "min_ms": 0.829,
+            "max_ms": 0.998
+          },
+          "cursor": {
+            "n": 15,
+            "median_ms": 0.125,
+            "p95_ms": 0.177,
+            "mean_ms": 0.137,
+            "min_ms": 0.118,
+            "max_ms": 0.213
+          }
+        }
+      },
+      "first_item_equal": true,
+      "items": 50
+    },
+    {
+      "endpoint": "audit_logs",
+      "page": 200,
+      "limit": 50,
+      "offset": 9950,
+      "offset_mode": {
+        "path": "/api/v1/audit-logs?pagination=offset&offset=9950&limit=50",
+        "latency": {
+          "n": 30,
+          "median_ms": 1.932,
+          "p95_ms": 2.233,
+          "mean_ms": 1.999,
+          "min_ms": 1.804,
+          "max_ms": 2.907
+        },
+        "bytes": 30632
+      },
+      "cursor_mode": {
+        "path": "/api/v1/audit-logs?pagination=cursor&limit=50&cursor=eyJ2IjoxLCJzIjoiODk5NjQ5NjMzMjY2MzIxOCIsInQiOiIyMDI2LTAxLTAyVDA2OjM0OjEwLjAwMDAwMCswMDowMCIsImkiOiIwMTliN2Q2OS1lMmQwLTcxZTgtOWIwYS1kNmI3MWJjMGQyMTcifQ.n41yRnbUHrelsKwsGuV5CQQ5n5MAblO1u65oUtV8emA",
+        "latency": {
+          "n": 30,
+          "median_ms": 1.291,
+          "p95_ms": 1.659,
+          "mean_ms": 1.339,
+          "min_ms": 1.181,
+          "max_ms": 1.696
+        },
+        "bytes": 30823,
+        "cursor_chars": 194
+      },
+      "offset_with_total": {
+        "latency": {
+          "n": 10,
+          "median_ms": 10.961,
+          "p95_ms": 14.134,
+          "mean_ms": 11.342,
+          "min_ms": 10.669,
+          "max_ms": 14.134
+        }
+      },
+      "speedup_median": 1.5,
+      "explain": {
+        "dialect": "postgresql",
+        "offset": [
+          "Limit  (cost=1462.10..1469.59 rows=51 width=24) (actual time=0.991..1.002 rows=51 loops=1)",
+          "  Buffers: shared hit=583",
+          "  ->  Index Scan Backward using ix_audit_logs_org_created_id on audit_logs  (cost=0.42..17628.73 rows=120000 width=24) (actual time=0.002..0.835 rows=10001 loops=1)",
+          "        Index Cond: (org_id = '11111111-1111-7111-8111-111111111111'::uuid)",
+          "        Filter: (deleted_at IS NULL)",
+          "        Buffers: shared hit=583",
+          "Planning Time: 0.015 ms",
+          "Execution Time: 1.005 ms"
+        ],
+        "cursor": [
+          "Limit  (cost=0.42..8.39 rows=51 width=24) (actual time=0.003..0.011 rows=51 loops=1)",
+          "  Buffers: shared hit=8",
+          "  ->  Index Scan Backward using ix_audit_logs_org_created_id on audit_logs  (cost=0.42..17202.67 rows=110047 width=24) (actual time=0.003..0.009 rows=51 loops=1)",
+          "        Index Cond: ((org_id = '11111111-1111-7111-8111-111111111111'::uuid) AND (ROW(created_at, id) < ROW('2026-01-02 14:34:10+08'::timestamp with time zone, '019b7d69-e2d0-71e8-9b0a-d6b71bc0d217'::uuid)))",
+          "        Filter: (deleted_at IS NULL)",
+          "        Buffers: shared hit=8",
+          "Planning Time: 0.020 ms",
+          "Execution Time: 0.015 ms"
+        ],
+        "execution_ms": {
+          "offset": 1.005,
+          "cursor": 0.015
+        },
+        "timing_ms": {
+          "offset": {
+            "n": 15,
+            "median_ms": 0.835,
+            "p95_ms": 1.008,
+            "mean_ms": 0.878,
+            "min_ms": 0.81,
+            "max_ms": 1.027
+          },
+          "cursor": {
+            "n": 15,
+            "median_ms": 0.17,
+            "p95_ms": 0.267,
+            "mean_ms": 0.176,
+            "min_ms": 0.116,
+            "max_ms": 0.273
+          }
+        }
+      },
+      "first_item_equal": true,
+      "items": 50
+    }
+  ]
+}

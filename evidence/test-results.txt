@@ -1,0 +1,77 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.12, pytest-8.4.2, pluggy-1.7.0 -- /Users/dongzhuo/Desktop/自建应用/ClawHunt/tasks/2992-S4-PERF-012/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/dongzhuo/Desktop/自建应用/ClawHunt/tasks/2992-S4-PERF-012
+configfile: pyproject.toml
+testpaths: tests
+plugins: cov-6.3.0, anyio-4.16.0
+collecting ... collected 41 items
+
+tests/test_compression.py::test_large_json_is_gzipped_and_decodes_to_full_payload PASSED [  2%]
+tests/test_compression.py::test_brotli_is_preferred_when_client_accepts_both PASSED [  4%]
+tests/test_compression.py::test_identity_gets_uncompressed_json PASSED   [  7%]
+tests/test_compression.py::test_small_json_is_not_compressed PASSED      [  9%]
+tests/test_compression.py::test_q_zero_disables_compression PASSED       [ 12%]
+tests/test_compression.py::test_parse_and_choose_accept_encoding PASSED  [ 14%]
+tests/test_compression.py::test_threshold_boundary_is_exact PASSED       [ 17%]
+tests/test_compression.py::test_never_compresses_no_transform_or_non_json PASSED [ 19%]
+tests/test_cursor_unit.py::test_scope_fingerprint_is_order_independent_and_ignores_empty_values PASSED [ 21%]
+tests/test_cursor_unit.py::test_encode_decode_roundtrip_preserves_microseconds_and_uuid PASSED [ 24%]
+tests/test_cursor_unit.py::test_tampered_cursor_is_rejected PASSED       [ 26%]
+tests/test_cursor_unit.py::test_cursor_scope_mismatch_is_explicit PASSED [ 29%]
+tests/test_cursor_unit.py::test_wrong_signing_key_is_rejected PASSED     [ 31%]
+tests/test_cursor_unit.py::test_naive_timestamp_is_treated_as_utc PASSED [ 34%]
+tests/test_cursor_unit.py::test_uuid7_is_lexicographically_time_ordered PASSED [ 36%]
+tests/test_openapi.py::test_openapi_documents_cursor_and_deprecated_offset[/api/v1/members] PASSED [ 39%]
+tests/test_openapi.py::test_openapi_documents_cursor_and_deprecated_offset[/api/v1/interactions] PASSED [ 41%]
+tests/test_openapi.py::test_openapi_documents_cursor_and_deprecated_offset[/api/v1/audit-logs] PASSED [ 43%]
+tests/test_openapi.py::test_page_models_expose_pagination_fields PASSED  [ 46%]
+tests/test_openapi.py::test_docs_markdown_and_exported_openapi_exist PASSED [ 48%]
+tests/test_pagination.py::test_page_200_cursor_matches_offset[/api/v1/members-Member-column0-members] PASSED [ 51%]
+tests/test_pagination.py::test_page_200_cursor_matches_offset[/api/v1/interactions-Interaction-column1-interactions] PASSED [ 53%]
+tests/test_pagination.py::test_page_200_cursor_matches_offset[/api/v1/audit-logs-AuditLog-column2-audit-logs] PASSED [ 56%]
+tests/test_pagination.py::test_members_cursor_walk_has_no_duplicates_and_descending_order PASSED [ 58%]
+tests/test_pagination.py::test_cursor_is_stable_when_rows_are_inserted_at_head PASSED [ 60%]
+tests/test_pagination.py::test_cursor_can_change_page_size PASSED        [ 63%]
+tests/test_pagination.py::test_invalid_cursor_returns_machine_readable_error PASSED [ 65%]
+tests/test_pagination.py::test_cursor_from_other_filter_is_rejected PASSED [ 68%]
+tests/test_pagination.py::test_cursor_from_other_tenant_is_rejected PASSED [ 70%]
+tests/test_pagination.py::test_offset_mode_still_returns_page_200_with_total PASSED [ 73%]
+tests/test_pagination.py::test_mode_parameter_conflicts_are_explicit PASSED [ 75%]
+tests/test_pagination.py::test_limit_is_bounded[0] PASSED                [ 78%]
+tests/test_pagination.py::test_limit_is_bounded[201] PASSED              [ 80%]
+tests/test_pagination.py::test_limit_is_bounded[-1] PASSED               [ 82%]
+tests/test_pagination.py::test_filters_are_applied[/api/v1/members-filters0] PASSED [ 85%]
+tests/test_pagination.py::test_filters_are_applied[/api/v1/interactions-filters1] PASSED [ 87%]
+tests/test_pagination.py::test_filters_are_applied[/api/v1/audit-logs-filters2] PASSED [ 90%]
+tests/test_pagination.py::test_soft_deleted_rows_are_not_listed PASSED   [ 92%]
+tests/test_pagination.py::test_cursor_after_last_row_returns_empty_page PASSED [ 95%]
+tests/test_pagination.py::test_other_lists_page_through_without_duplicates[/api/v1/interactions-interactions-Interaction-column0] PASSED [ 97%]
+tests/test_pagination.py::test_other_lists_page_through_without_duplicates[/api/v1/audit-logs-audit-logs-AuditLog-column1] PASSED [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /Users/dongzhuo/Desktop/自建应用/ClawHunt/tasks/2992-S4-PERF-012/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+______________ coverage: platform darwin, python 3.12.12-final-0 _______________
+
+Name                 Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------
+app/__init__.py          0      0      0      0   100%
+app/compression.py     127     15     48      8    86%   35, 39, 45->43, 48-49, 51, 59, 93-94, 105-106, 180, 205-208
+app/config.py           13      0      0      0   100%
+app/constants.py         8      0      0      0   100%
+app/cursor.py           61      5     10      1    92%   79-80, 87, 97-98
+app/db.py               43      5      8      4    82%   17->exit, 19->exit, 21->exit, 32-33, 59-61
+app/identity.py         12      0      0      0   100%
+app/ids.py              15      0      2      0   100%
+app/main.py            112     10     36      7    89%   46, 48-49, 85, 165, 217-218, 269, 333, 335
+app/models.py           54      0      0      0   100%
+app/pagination.py       40      1      6      1    96%   31
+app/schemas.py          63      0      0      0   100%
+----------------------------------------------------------------
+TOTAL                  548     36    110     21    91%
+======================== 41 passed, 1 warning in 1.42s =========================

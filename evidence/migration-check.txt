@@ -1,0 +1,14 @@
+== downgrade base ==
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running downgrade 0001_perf012 -> , create perf012 list tables and keyset indexes
+== upgrade head ==
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> 0001_perf012, create perf012 list tables and keyset indexes
+== tables ==
+tables: alembic_version, audit_logs, interactions, members
+indexes[members]: ix_members_org_created_id, ix_members_org_status_created_id, ix_members_org_tier_created_id
+indexes[interactions]: ix_interactions_org_channel_occurred_id, ix_interactions_org_member_occurred_id, ix_interactions_org_occurred_id
+indexes[audit_logs]: ix_audit_logs_org_action_created_id, ix_audit_logs_org_actor_created_id, ix_audit_logs_org_created_id
+server: 16.16 (Homebrew)
